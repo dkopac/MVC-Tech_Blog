@@ -1,0 +1,21 @@
+<article>
+    <a href="/dashboard" class="is-pulled-right"> &larr; back to dashboard</a>
+    <h2 class="titlemt-5">Edit Post</h2><hr>
+    <form class="edit-post-form">
+        <div>
+            <label for="post-title">Title</label>
+            <input class="input" name="post-title" type="text" value="{{post.title}}" />"
+        </div>
+        <div>
+            <label for ="post-content">Content</label>
+            <input class="textarea" name="post-content" type="text" value="{{post.content}}" />
+        </div>
+        <div class="is-pulled-right">
+            <button class="button is-danger" id="delete">Delete</button>
+            <button class="button is-success" type="submit">Update</button>
+    </form>
+</article>
+{{> comment post.comments}}
+<script src="/MVC-Tech_Blog/public/JS/edit-post.js"></script>
+<script src="/MVC-Tech_Blog/public/JS/comment.js"> </script>
+<script src="/MVC-Tech_Blog/public/JS/delete-comment.js"> </script>
