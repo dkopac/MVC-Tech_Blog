@@ -19,6 +19,7 @@
   "homepage": "https://github.com/dkopac/MVC-Tech_Blog#readme",
   "dependencies": {
     "connection": "^1.4.0",
+    "connection.js": "^0.0.2",
     "express": "^4.18.2",
     "sequelize": "^6.31.1"
   }
