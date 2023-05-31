@@ -22,17 +22,6 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // User ID
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "user",
-        key: "id",
-      },
-      // On delete cascade
-      onDelete: "cascade",
-    },
   },
   {
     sequelize,

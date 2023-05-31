@@ -5,22 +5,24 @@ const withAuth = require("../utils/auth");
 
 // GET all posts for dashboard
 router.get("/", withAuth, (req, res) => {
+  console.log(req.session);
   Post.findAll({
     where: {
       // use the ID from the session
       user_id: req.session.user_id,
     },
     attributes: ["id", "title", "content", "created_at"],
-    include: [
-      {
-        model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
-        include: { model: User, attributes: ["username"] },
-      },
-      { model: User, attributes: ["username"] },
-    ],
+    // include: [
+    //   {
+    //     model: Comment,
+    //     attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+    //     include: { model: User, attributes: ["username"] },
+    //   },
+    //   { model: User, attributes: ["username"] },
+    // ],
   })
     .then((dbPostData) => {
+      console.log(dbPostData);
       // serialize data before passing to template
       const posts = dbPostData.map((post) => post.get({ plain: true }));
       // pass data to template

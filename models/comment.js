@@ -21,28 +21,6 @@ Comment.init(
         len: [1],
       },
     },
-    // User ID
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "user",
-        key: "id",
-      },
-      // On delete cascade
-      onDelete: "cascade",
-    },
-    // Post ID
-    post_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "post",
-        key: "id",
-      },
-      // On delete cascade
-      onDelete: "cascade",
-    },
   },
   {
     sequelize,

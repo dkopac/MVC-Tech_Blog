@@ -43,6 +43,13 @@ const userData = [
     linkedin: "https://www.linkedin.com/in/sue-s-1a2b3c4d5/",
     github: "SueS",
   },
+  {
+    username: "dkopac",
+    email: "dkopac96@gmail.com",
+    password: "Buddy711!",
+    linkedin: "dkopac96",
+    github: "dkopac",
+  },
 ];
 
 const seedUsers = () => User.bulkCreate(userData);
